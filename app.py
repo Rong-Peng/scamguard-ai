@@ -1,4 +1,3 @@
-
 import streamlit as st
 import google.generativeai as genai
 
@@ -74,7 +73,7 @@ if st.button("开始安全检测 🚀", type="primary"):
         with st.spinner("正在分析对方的心理图谱..."):
             try:
                 # 调用 Gemini Pro 模型
-                model = genai.GenerativeModel('gemini-1.5-flash') # flash 模型更快更便宜（免费额度更高）
+                model = genai.GenerativeModel('gemini-2.5-flash') # flash 模型更快更便宜（免费额度更高）
                 
                 # 拼接 Prompt
                 full_prompt = f"{SYSTEM_PROMPT}\n\n待分析内容：\n{user_input}"
